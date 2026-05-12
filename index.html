@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+  ================================================================
+    PORTFOLIO — INDEX.HTML
+    ================================================================
+    QUICK CUSTOMIZATION GUIDE:
+    1. NAME         → Search for "Your Name" and replace everywhere
+    2. PROFILE IMG  → .profile-img src attribute (line ~140)
+    3. ABOUT IMGS   → .about-img-main / .about-img-accent (line ~230)
+    4. SOCIAL LINKS → Section marked "SOCIAL LINKS" (line ~165)
+    5. PROJECT INFO → Section marked "PROJECTS" (~line 330)
+    6. CERTIFICATES → Section marked "CERTIFICATES" (~line 420)
+    7. CONTACT INFO → Section marked "CONTACT INFO" (~line 600)
+    8. COLORS       → css/style.css → :root variables
+    9. FOOTER LINKS → Footer section (~line 680)
+  ================================================================
+  -->
+  <title>Bintou Djassi — Digital Marketing & Web Development</title>
+  <meta name="description" content="Portfolio of Bintou Djassi — Web Developer & Digital Marketing Student" />
+
+  <!-- Favicon (optional: replace with /assets/images/favicon.ico) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+
+<!-- ================================================================
+     PAGE LOADER
+================================================================ -->
+<div id="loader">
+  <div class="loader-logo">Bintou Djassi <span>Diakité</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- ================================================================
+     PARTICLES CANVAS (background effect)
+================================================================ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ================================================================
+     NAVIGATION
+     CUSTOMIZE: change logo text and nav items as needed
+================================================================ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <!-- LOGO: change "Your" and "Name" text here -->
+    <a href="#home" class="nav-logo">Bintou Djassi <span>Diakité</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+    </ul>
+
+    <div class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ================================================================
+     HERO SECTION
+     CUSTOMIZE: name, bio, profile image, social links
+================================================================ -->
+<section id="home">
+  <div class="hero-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <div class="hero-inner">
+    <!-- LEFT: Text Content -->
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, World ✦</p>
+
+      <!-- CHANGE NAME: replace "Your" and "Name" below -->
+      <h1 class="hero-name">
+        Bintou Djassi
+        <em>Diakité</em>
+      </h1>
+
+      <!-- Animated typing role text -->
+      <p class="hero-role">
+        <span id="typed-text">Web Developer</span><span class="typed-cursor"></span>
+      </p>
+
+      <!-- SHORT BIO: customize this paragraph -->
+      <p class="hero-bio">
+        Ambitious digital creative passionate about crafting beautiful web experiences,
+        strategic digital marketing, and innovative multimedia design. Turning ideas
+        into impactful digital realities.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-eye"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fa-regular fa-envelope"></i> Get In Touch
+        </a>
+        <!-- RESUME DOWNLOAD: replace href with your actual CV file path -->
+        <a href="assets/resume.pdf" download class="btn btn-ghost">
+          <i class="fa-solid fa-download"></i> Download CV
+        </a>
+      </div>
+
+      <!-- ==========================================
+           SOCIAL LINKS — CHANGE URLs HERE
+           ========================================== -->
+      <div class="hero-socials" id="hero-socials">
+        <!-- LinkedIn: replace # with your profile URL -->
+        <a href="https://www.linkedin.com/in/bintou-djassi-diakit%C3%A9-106190278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <!-- GitHub: replace # with your GitHub URL -->
+        <a href="https://github.com/Bintouddk" target="_blank" class="social-icon" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <!-- Instagram: replace # with your Instagram URL -->
+        <a href="https://www.instagram.com/bintou_djassi" target="_blank" class="social-icon" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <!-- Behance: replace # with your Behance URL -->
+        <a href="https://www.behance.net/bintoudjassi" target="_blank" class="social-icon" aria-label="Behance">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <!-- Email: replace with your email -->
+        <a href="mailto:bintoudiakite562@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Profile Image -->
+    <div class="hero-visual">
+      <div class="profile-frame">
+        <div class="profile-img-wrap">
+          <!--
+            CHANGE PROFILE IMAGE:
+            Option 1 — Replace with your photo:
+              <img class="profile-img" src="assets/images/profile.jpg" alt="Your Name" />
+            Option 2 — Keep placeholder below (remove comment tags and delete placeholder div)
+          -->
+          <div class="profile-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="30" r="18" fill="#D9878A" opacity="0.5"/>
+              <ellipse cx="40" cy="62" rx="28" ry="16" fill="#D9878A" opacity="0.3"/>
+            </svg>
+            <p><img src="image.jpeg" alt=""></p>
+          </div>
+        </div>
+
+        <!-- Floating availability badge -->
+        <div class="profile-badge">
+          <div class="badge-dot"></div>
+          <div class="badge-text">
+            <strong>Available for work</strong>
+            Open to opportunities
+          </div>
+        </div>
+
+        <!-- Floating decorative tags -->
+        <div class="floating-tag tag-1">✦ Web Dev</div>
+        <div class="floating-tag tag-2">Digital Marketing ✦</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     ABOUT SECTION
+     CUSTOMIZE: bio paragraphs, trait chips, stat number
+================================================================ -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left: Image Stack -->
+      <div class="about-image-stack reveal">
+        <div class="about-img-accent">
+          <!--
+            CHANGE ABOUT IMAGE 1 (small, left):
+            <img src="assets/images/about-accent.jpg" alt="About" style="width:100%;height:100%;object-fit:cover;" />
+          -->
+          <div class="about-img-placeholder">🎨</div>
+        </div>
+        <div class="about-img-main">
+          <!--
+            CHANGE ABOUT IMAGE 2 (large, right):
+            <img src="assets/images/about-main.jpg" alt="About" style="width:100%;height:100%;object-fit:cover;" />
+          -->
+          <div class="about-img-placeholder"> <img src="image2.jpeg" alt=""> </div>
+        </div>
+        <!-- CHANGE STAT: update number and label -->
+        <div class="about-stat-card reveal reveal-delay-3">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years of Learning</span>
+        </div>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="about-content">
+        <p class="section-label reveal">About Me</p>
+        <h2 class="section-title reveal reveal-delay-1">
+          Passionate Creative &amp; <em>Digital Strategist</em>
+        </h2>
+
+        <!-- BIO PARAGRAPHS: customize these texts -->
+        <p class="section-subtitle reveal reveal-delay-2">
+          I'm an ambitious and detail-driven student specializing in Web Development and
+          Digital Marketing, with a deep passion for building beautiful, functional digital
+          experiences. My journey spans from crafting pixel-perfect interfaces to devising
+          data-driven marketing strategies.
+        </p>
+
+        <p class="section-subtitle reveal reveal-delay-3" style="margin-top:14px;">
+          I thrive at the intersection of technology and creativity — whether it's designing
+          an intuitive UI, building a responsive website, managing brand communications,
+          or producing engaging multimedia content. I believe every project is an
+          opportunity to innovate and leave a lasting impression.
+        </p>
+
+        <!-- TRAITS: add/remove/edit chips as needed -->
+        <div class="about-traits reveal reveal-delay-4">
+          <span class="trait-chip">🎯 Goal-Oriented</span>
+          <span class="trait-chip">💡 Creative Thinker</span>
+          <span class="trait-chip">📱 Digital Native</span>
+          <span class="trait-chip">✨ Detail-Focused</span>
+          <span class="trait-chip">🚀 Fast Learner</span>
+          <span class="trait-chip">🤝 Team Player</span>
+          <span class="trait-chip">📊 Data-Driven</span>
+          <span class="trait-chip">🌐 Multilingual</span>
+        </div>
+
+        <!-- VALUES: edit icons, titles, and descriptions -->
+        <div class="about-values">
+          <div class="value-item reveal">
+            <div class="value-icon">🎨</div>
+            <div class="value-text">
+              <h4>Creative Excellence</h4>
+              <p>Every design decision tells a story and serves a purpose.</p>
+            </div>
+          </div>
+          <div class="value-item reveal reveal-delay-1">
+            <div class="value-icon">📈</div>
+            <div class="value-text">
+              <h4>Strategic Thinking</h4>
+              <p>Combining creativity with analytics to achieve measurable results.</p>
+            </div>
+          </div>
+          <div class="value-item reveal reveal-delay-2">
+            <div class="value-icon">🌱</div>
+            <div class="value-text">
+              <h4>Continuous Growth</h4>
+              <p>Always learning, always evolving with the digital landscape.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary reveal reveal-delay-3" style="margin-top:32px; display:inline-flex;">
+          <i class="fa-solid fa-paper-plane"></i> Let's Collaborate
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SKILLS SECTION
+     CUSTOMIZE: skill categories, skill names, and percentage values
+================================================================ -->
+<section id="skills" class="section-padding">
+  <div class="container">
+    <div class="skills-header">
+      <p class="section-label reveal">My Expertise</p>
+      <h2 class="section-title reveal reveal-delay-1">Skills &amp; <em>Competencies</em></h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        A curated blend of technical development skills and creative marketing capabilities,
+        continuously refined through coursework, certifications, and hands-on projects.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- WEB DEVELOPMENT SKILLS -->
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon icon-dev">💻</div>
+          <span class="skill-cat-title">Web Development</span>
+        </div>
+        <div class="skill-items">
+          <!-- data-width = percentage (0–100) -->
+          <div>
+            <div class="skill-item-label"><span>HTML5 &amp; CSS3</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>JavaScript</span><span>75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>WordPress</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>MySQL</span><span>65%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>UI/UX Basics</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIGITAL MARKETING SKILLS -->
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon icon-mktg">📊</div>
+          <span class="skill-cat-title">Digital Marketing</span>
+        </div>
+        <div class="skill-items">
+          <div>
+            <div class="skill-item-label"><span>SEO &amp; SEM</span><span>82%</span></div>
+            <div class="skill-bar"><div class="skill-fill lavender" data-width="82"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Social Media Marketing</span><span>88%</span></div>
+            <div class="skill-bar"><div class="skill-fill lavender" data-width="88"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Content Strategy</span><span>84%</span></div>
+            <div class="skill-bar"><div class="skill-fill lavender" data-width="84"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Email Marketing</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-fill lavender" data-width="70"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Analytics &amp; Reporting</span><span>72%</span></div>
+            <div class="skill-bar"><div class="skill-fill lavender" data-width="72"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESIGN & CREATIVE SKILLS -->
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon icon-design">🎨</div>
+          <span class="skill-cat-title">Design &amp; Creative</span>
+        </div>
+        <div class="skill-items">
+          <div>
+            <div class="skill-item-label"><span>Adobe Photoshop</span><span>78%</span></div>
+            <div class="skill-bar"><div class="skill-fill peach" data-width="78"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Adobe Illustrator</span><span>68%</span></div>
+            <div class="skill-bar"><div class="skill-fill peach" data-width="68"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Canva &amp; Figma</span><span>85%</span></div>
+            <div class="skill-bar"><div class="skill-fill peach" data-width="85"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Branding &amp; Identity</span><span>80%</span></div>
+            <div class="skill-bar"><div class="skill-fill peach" data-width="80"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Multimedia Production</span><span>73%</span></div>
+            <div class="skill-bar"><div class="skill-fill peach" data-width="73"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOLS & PROFESSIONAL SKILLS -->
+      <div class="skill-category reveal reveal-delay-3">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon icon-tools">⚙️</div>
+          <span class="skill-cat-title">Tools &amp; Professional</span>
+        </div>
+        <div class="skill-items">
+          <div>
+            <div class="skill-item-label"><span>Microsoft Office Suite</span><span>92%</span></div>
+            <div class="skill-bar"><div class="skill-fill gold" data-width="92"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Content Creation</span><span>86%</span></div>
+            <div class="skill-bar"><div class="skill-fill gold" data-width="86"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Communication</span><span>90%</span></div>
+            <div class="skill-bar"><div class="skill-fill gold" data-width="90"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Project Management</span><span>70%</span></div>
+            <div class="skill-bar"><div class="skill-fill gold" data-width="70"></div></div>
+          </div>
+          <div>
+            <div class="skill-item-label"><span>Lean Six Sigma</span><span>65%</span></div>
+            <div class="skill-bar"><div class="skill-fill gold" data-width="65"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     PROJECTS SECTION
+     CUSTOMIZE: project titles, descriptions, tech tags, links, images
+================================================================ -->
+<section id="projects" class="section-padding">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <p class="section-label reveal">My Work</p>
+        <h2 class="section-title reveal reveal-delay-1">Featured <em>Projects</em></h2>
+      </div>
+      <p class="section-subtitle reveal" style="max-width:340px;">
+        A selection of projects reflecting my skills in web development and digital creativity.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ── PROJECT 1: Portfolio Website ── -->
+      <div class="project-card reveal">
+        <div class="project-img project-img-1">
+          <!--
+            CHANGE PROJECT 1 IMAGE:
+            Option A — CSS background: edit .project-img-1 in css/style.css
+            Option B — Replace emoji div with: <img src="assets/images/project-portfolio.jpg" ... />
+          -->
+          <div class="project-img-inner">🌸</div>
+          <span class="project-tag">Web Dev</span>
+          <div class="project-overlay">
+            <!-- CHANGE LIVE DEMO LINK for project 1 -->
+            <a href="#" target="_blank" class="btn btn-primary" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-solid fa-globe"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-ghost" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">
+            A fully responsive personal portfolio showcasing skills, projects, and achievements
+            with smooth animations, glassmorphism UI, and a feminine luxury aesthetic.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Responsive Design</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 2: Food Scan App ── -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-img project-img-2">
+          <!--
+            CHANGE PROJECT 2 IMAGE:
+            Replace emoji div or set background in css/style.css → .project-img-2
+          -->
+          <div class="project-img-inner">🥗</div>
+          <span class="project-tag">App</span>
+          <div class="project-overlay">
+            <a href="#" target="_blank" class="btn btn-primary" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-solid fa-globe"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-ghost" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Food Scan App</h3>
+          <p class="project-desc">
+            A smart food scanning web application that identifies nutritional information,
+            allergens, and dietary suitability through barcode/image recognition with a
+            clean, user-friendly interface.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">API Integration</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">UX Design</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROJECT 3: E-commerce Website ── -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-img project-img-3">
+          <!--
+            CHANGE PROJECT 3 IMAGE:
+            Replace emoji div or set background in css/style.css → .project-img-3
+          -->
+          <div class="project-img-inner">🛍️</div>
+          <span class="project-tag">E-commerce</span>
+          <div class="project-overlay">
+            <a href="#" target="_blank" class="btn btn-primary" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-solid fa-globe"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-ghost" style="font-size:0.78rem;padding:10px 18px;">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">E-commerce Website</h3>
+          <p class="project-desc">
+            A fully functional e-commerce platform featuring product listings, shopping cart,
+            user authentication, payment integration, and a modern responsive design optimized
+            for conversions.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML/CSS/JS</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">WordPress</span>
+            <span class="tech-tag">WooCommerce</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+            <a href="#" target="_blank" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<!-- ================================================================
+     EDUCATION SECTION
+     CUSTOMIZE: degrees, schools, years, descriptions
+================================================================ -->
+<section id="education" class="section-padding">
+  <div class="container">
+    <div class="edu-layout">
+
+      <!-- Left: Intro -->
+      <div class="edu-intro">
+        <p class="section-label reveal">Academic Journey</p>
+        <h2 class="section-title reveal reveal-delay-1">Education &amp; <em>Training</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          A multidisciplinary academic path that merges finance, marketing, and web
+          development — building a solid foundation for a career in digital innovation.
+        </p>
+        <div class="edu-highlight reveal reveal-delay-3">
+          <h4>Currently Pursuing</h4>
+          <!-- CHANGE CURRENT DEGREE INFO here -->
+          <p>Bachelor in Web Development — Collège de Paris (Université Amilcar), Tunis</p>
+        </div>
+      </div>
+
+      <!-- Right: Timeline -->
+      <div class="edu-timeline">
+
+        <!-- ── EDUCATION ITEM 1 ── CHANGE INFO HERE ── -->
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <!-- CHANGE: year, degree, school, description -->
+            <p class="edu-period">2021 – 2024</p>
+            <h3 class="edu-degree">DUT in Finance &amp; Accounting</h3>
+            <p class="edu-school">Université Technolab</p>
+            <p class="edu-desc">
+              Developed a strong analytical foundation in financial management, accounting
+              principles, and business administration — skills that now inform data-driven
+              marketing and project budgeting strategies.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── EDUCATION ITEM 2 ── -->
+        <div class="edu-item reveal reveal-delay-1">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <p class="edu-period">2024 – 2026</p>
+            <h3 class="edu-degree">BTS in Digital Marketing &amp; Web Development</h3>
+            <p class="edu-school">CSFT — Centre Supérieur de Formation Technique, Tunis</p>
+            <p class="edu-desc">
+              Mastered the synergy between digital marketing strategies and web development
+              techniques, covering SEO, social media campaigns, content creation, HTML/CSS,
+              JavaScript, and WordPress development.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── EDUCATION ITEM 3 ── -->
+        <div class="edu-item reveal reveal-delay-2">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <p class="edu-period">2026 – Present</p>
+            <h3 class="edu-degree">Bachelor in Web Development</h3>
+            <p class="edu-school">Collège de Paris (Université Amilcar), Tunis</p>
+            <p class="edu-desc">
+              Currently deepening expertise in advanced web technologies, software development
+              principles, database management, and full-stack development through a French
+              accredited curriculum tailored for the digital economy.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /edu-timeline -->
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CERTIFICATES SECTION
+     CUSTOMIZE: certificate images, names, issuers, descriptions
+================================================================ -->
+<section id="certificates" class="section-padding">
+  <div class="container">
+    <div class="certs-header">
+      <p class="section-label reveal">Credentials</p>
+      <h2 class="section-title reveal reveal-delay-1">My <em>Certifications</em></h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Industry-recognized certifications that validate my expertise across technology,
+        marketing, and professional development disciplines.
+      </p>
+    </div>
+
+    <div class="certs-grid">
+
+      <!-- ── CERTIFICATE 1: Microsoft Office Specialist ── -->
+      <!--
+        CHANGE CERT 1:
+        - data-img   → path to certificate image
+        - data-title → certificate full name
+        - data-issuer→ issuing organization
+        - src below  → same image path
+      -->
+      <div class="cert-card reveal"
+           data-img="certifMiro.jpeg"
+           data-title="Microsoft Office Specialist"
+           data-issuer="Microsoft — PowerPoint, Word &amp; Excel">
+        <div class="cert-img-wrap">
+          <img src="certifMiro.jpeg"
+               alt="Microsoft Office Specialist Certificate"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="cert-img-placeholder" style="display:none;">
+            🏆 <span>microsoft-office-specialist.jpg</span>
+          </div>
+          <div class="cert-zoom-overlay">🔍</div>
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer">Microsoft</p>
+          <h3 class="cert-name">Microsoft Office Specialist</h3>
+          <p class="cert-desc">Certified proficiency in PowerPoint, Word, and Excel — validating advanced productivity and presentation skills.</p>
+        </div>
+      </div>
+
+      <!-- ── CERTIFICATE 2: Meta Digital Marketing ── -->
+      <div class="cert-card reveal reveal-delay-1"
+           data-img="certifMeta.jpeg"
+           data-title="Meta Certified Digital Marketing Associate"
+           data-issuer="Meta (Facebook)">
+        <div class="cert-img-wrap">
+          <img src="certifMeta.jpeg"
+               alt="Meta Certified Digital Marketing Associate"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="cert-img-placeholder" style="display:none;">
+            📱 <span>meta-digital-marketing.jpg</span>
+          </div>
+          <div class="cert-zoom-overlay">🔍</div>
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer">Meta (Facebook)</p>
+          <h3 class="cert-name">Certified Digital Marketing Associate</h3>
+          <p class="cert-desc">Demonstrates expertise in Meta advertising platforms, audience targeting, campaign management, and performance analytics.</p>
+        </div>
+      </div>
+
+      <!-- ── CERTIFICATE 3: Lean Six Sigma ── -->
+      <div class="cert-card reveal reveal-delay-2"
+           data-img="certifWhite.jpeg"
+           data-title="Lean Six Sigma White Belt"
+           data-issuer="Lean Six Sigma Institute">
+        <div class="cert-img-wrap">
+          <img src="certifWhite.jpeg"
+               alt="Lean Six Sigma White Belt Certificate"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="cert-img-placeholder" style="display:none;">
+            ⚙️ <span>lean-six-sigma-white-belt.jpg</span>
+          </div>
+          <div class="cert-zoom-overlay">🔍</div>
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer">Lean Six Sigma Institute</p>
+          <h3 class="cert-name">Lean Six Sigma White Belt</h3>
+          <p class="cert-desc">Foundation-level certification in process improvement, quality management, and operational efficiency methodologies.</p>
+        </div>
+      </div>
+
+    </div><!-- /certs-grid -->
+  </div>
+</section>
+
+<!-- Certificate Modal -->
+<div id="cert-modal" role="dialog" aria-modal="true">
+  <div class="modal-content" style="position:relative;">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <img id="modal-img" class="modal-img" src="" alt="" />
+    <div class="modal-body">
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-issuer" id="modal-issuer"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     SERVICES SECTION
+     CUSTOMIZE: service titles, descriptions, icons
+================================================================ -->
+<section id="services" class="section-padding">
+  <div class="container">
+    <div class="services-header">
+      <p class="section-label reveal">What I Offer</p>
+      <h2 class="section-title reveal reveal-delay-1">My <em>Services</em></h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Comprehensive digital services crafted with precision, creativity, and a deep
+        understanding of your brand's unique vision and audience.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- CHANGE SERVICE ICONS (emoji or Font Awesome), TITLES, DESCRIPTIONS -->
+      <div class="service-card reveal">
+        <div class="service-icon svc-1">🌐</div>
+        <h3 class="service-title">Web Development</h3>
+        <p class="service-desc">Custom, responsive websites built from scratch with clean code, modern design, and optimized performance across all devices and browsers.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon svc-2">✨</div>
+        <h3 class="service-title">Portfolio Creation</h3>
+        <p class="service-desc">Stunning personal or professional portfolios that showcase your work, tell your story, and make an unforgettable first impression.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon svc-3">🚀</div>
+        <h3 class="service-title">Landing Pages</h3>
+        <p class="service-desc">High-converting landing pages designed with persuasive UX principles and compelling visuals to turn visitors into loyal customers.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon svc-4">🎨</div>
+        <h3 class="service-title">Branding &amp; Identity</h3>
+        <p class="service-desc">Complete brand identity packages including logo design, color palette, typography systems, and brand guidelines for consistent visual communication.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon svc-5">📊</div>
+        <h3 class="service-title">Digital Marketing</h3>
+        <p class="service-desc">Data-driven digital marketing strategies covering SEO, SEM, email campaigns, and content marketing to grow your online presence and reach.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon svc-6">🎬</div>
+        <h3 class="service-title">Multimedia Design</h3>
+        <p class="service-desc">Engaging visual content including graphics, presentations, motion designs, and promotional materials that capture attention and communicate clearly.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon svc-7">📱</div>
+        <h3 class="service-title">Social Media Management</h3>
+        <p class="service-desc">Strategic social media content planning, design, scheduling, and analytics to build community, drive engagement, and amplify your brand voice.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CONTACT SECTION
+     CUSTOMIZE: email, phone, location, social links
+================================================================ -->
+<section id="contact" class="section-padding">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Contact Info -->
+      <div class="contact-info">
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 class="section-title reveal reveal-delay-1">Let's Work <em>Together</em></h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Have a project in mind, a collaboration idea, or just want to say hello?
+          I'd love to hear from you. Let's create something beautiful together.
+        </p>
+
+        <!-- ==========================================
+             CONTACT INFO — CHANGE DETAILS HERE
+             ========================================== -->
+        <div class="contact-items">
+          <div class="contact-item reveal reveal-delay-1">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <!-- CHANGE EMAIL -->
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-2">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-text">
+              <strong>Phone</strong>
+              <!-- CHANGE PHONE -->
+              <a href="tel:+21600000000">+216 00 000 000</a>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-3">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Location</strong>
+              <!-- CHANGE LOCATION -->
+              <span>Tunis, Tunisia</span>
+            </div>
+          </div>
+          <div class="contact-item reveal reveal-delay-4">
+            <div class="contact-item-icon">💼</div>
+            <div class="contact-item-text">
+              <strong>Availability</strong>
+              <span>Open to freelance &amp; internship opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration..." required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project or how I can help..." required></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success">
+            ✓ Your message has been sent! I'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+     CUSTOMIZE: logo, tagline, social links, quick links
+================================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <!-- CHANGE FOOTER LOGO NAME -->
+        <div class="nav-logo">Bintou Djassi Diakité</div>
+        <p>Web Developer &amp; Digital Marketing Specialist crafting beautiful digital experiences with purpose and passion.</p>
+        <!-- ==========================================
+             FOOTER SOCIAL LINKS — CHANGE URLs HERE
+             ========================================== -->
+        <div class="footer-socials">
+          <a href="#" target="_blank" class="footer-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" target="_blank" class="footer-social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" class="footer-social-icon" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Column -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+          <li><a href="#services">Branding &amp; Identity</a></li>
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#services">Social Media</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /footer-inner -->
+
+    <div class="footer-bottom">
+      <!-- CHANGE COPYRIGHT NAME -->
+      <p>© 2025 Bintou Djassi Diakité. All rights reserved.</p>
+      <span>Designed &amp; Built with <span style="color:var(--rose);">♥</span> by <a href="#home">Bintou Djassi Diakité</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-top" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- Main Script -->
+<script src="main.js"></script>
+
+</body>
+</html>
